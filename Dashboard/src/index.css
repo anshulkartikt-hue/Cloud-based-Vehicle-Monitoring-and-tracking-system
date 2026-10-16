@@ -1,0 +1,63 @@
+/* Font imports must remain at the top */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
+
+/* Tailwind CSS v4 */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Existing theme variables */
+:root {
+  --canvas: 241 244 249;
+  --surface: 255 255 255;
+  --surface2: 246 248 252;
+  --line: 226 232 240;
+  --ink: 15 23 42;
+  --muted: 92 107 130;
+  --accent: 37 99 235;
+  --accent-ink: 255 255 255;
+  --ok: 21 128 61;
+  --warn: 180 83 9;
+  --danger: 200 30 30;
+}
+
+.dark {
+  --canvas: 8 13 28;
+  --surface: 16 24 46;
+  --surface2: 22 32 60;
+  --line: 34 47 82;
+  --ink: 226 232 240;
+  --muted: 148 163 184;
+  --accent: 110 155 255;
+  --accent-ink: 8 13 28;
+  --ok: 52 211 153;
+  --warn: 251 191 36;
+  --danger: 248 113 113;
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.leaflet-container {
+  z-index: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: rgb(var(--surface2));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition-duration: 0ms !important;
+  }
+}
